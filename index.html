@@ -24,6 +24,26 @@
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             backdrop-filter: blur(5px);
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: left;
+            font-size: 1.2rem;
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo span {
+            display: block;
+            font-size: 0.8rem;
+            color: #e0e0e0;
+            font-weight: normal;
+        }
+        .main-content {
+            padding-top: 2rem;
         }
         h1 {
             font-size: 2.8rem;
@@ -39,15 +59,17 @@
         .features {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
         .feature {
             flex: 1;
+            min-width: 200px;
             padding: 1rem;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
-            margin: 0 10px;
+            margin: 0 5px;
         }
         .feature h3 {
             color: #007bff;
@@ -89,29 +111,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>Transform Your Business Resilience</h1>
-        <p class="tagline">Revolutionizing decision-making through advanced wargaming and scenario exercises</p>
+        <a href="#" class="logo">
+            Decision Agent
+            <span>Business Resilience</span>
+        </a>
         
-        <div class="features">
-            <div class="feature">
-                <h3>Wargaming</h3>
-                <p>Strategic simulation for better business outcomes</p>
+        <div class="main-content">
+            <h1>Stay ahead of the curve</h1>
+            <p class="tagline">Revolutionizing decision-making through advanced wargaming and agentic AI-powered scenario exercises</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Wargaming</h3>
+                    <p>Strategic simulation for better business outcomes</p>
+                </div>
+                <div class="feature">
+                    <h3>Decision Making</h3>
+                    <p>Enhanced crisis response capabilities</p>
+                </div>
+                <div class="feature">
+                    <h3>Exercising</h3>
+                    <p>Real-world scenario training</p>
+                </div>
+                <div class="feature">
+                    <h3>Agentic AI</h3>
+                    <p>Advanced AI-driven scenario generation and analysis</p>
+                </div>
             </div>
-            <div class="feature">
-                <h3>Decision Making</h3>
-                <p>Enhanced crisis response capabilities</p>
-            </div>
-            <div class="feature">
-                <h3>Exercising</h3>
-                <p>Real-world scenario training</p>
-            </div>
-        </div>
 
-        <form class="email-form" id="emailForm">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Get Early Access</button>
-        </form>
-        <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
+            <form class="email-form" id="emailForm">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Get Early Access</button>
+            </form>
+            <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
+        </div>
     </div>
 
     <script>
