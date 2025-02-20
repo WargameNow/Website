@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Decision Agent</title>
+    <title>Business Resilience Wargaming - Coming Soon</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,22 +12,46 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
         }
         .container {
             text-align: center;
             padding: 2rem;
-            max-width: 600px;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
         }
         h1 {
-            font-size: 2.5rem;
-            color: #333;
+            font-size: 2.8rem;
+            color: white;
             margin-bottom: 1rem;
         }
         .tagline {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 1.4rem;
+            color: #e0e0e0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             margin-bottom: 2rem;
+        }
+        .feature {
+            flex: 1;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 0 10px;
+        }
+        .feature h3 {
+            color: #007bff;
+            margin-bottom: 0.5rem;
         }
         .email-form {
             display: flex;
@@ -41,6 +65,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
         }
         button {
             padding: 0.8rem 1.5rem;
@@ -64,13 +89,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Decision Agent</h1>
-        <p class="tagline">Something exciting is coming soon. Be the first to know when we launch!</p>
+        <h1>Transform Your Business Resilience</h1>
+        <p class="tagline">Revolutionizing decision-making through advanced wargaming and scenario exercises</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Wargaming</h3>
+                <p>Strategic simulation for better business outcomes</p>
+            </div>
+            <div class="feature">
+                <h3>Decision Making</h3>
+                <p>Enhanced crisis response capabilities</p>
+            </div>
+            <div class="feature">
+                <h3>Exercising</h3>
+                <p>Real-world scenario training</p>
+            </div>
+        </div>
+
         <form class="email-form" id="emailForm">
             <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Notify Me</button>
+            <button type="submit">Get Early Access</button>
         </form>
-        <p class="success-message" id="successMessage">Thanks! We'll keep you updated.</p>
+        <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
     </div>
 
     <script>
