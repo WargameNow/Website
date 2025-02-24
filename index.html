@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Resilience Wargaming - Coming Soon</title>
+    <title>Decision Agent - Coming Soon</title>
     <style>
         :root {
             --primary: #2563eb;
             --primary-light: #3b82f6;
             --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
             --gray-700: #374151;
             --gray-800: #1f2937;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,92 +27,39 @@
 
         .container {
             text-align: center;
-            padding: 2.5rem;
-            max-width: 900px;
+            padding: 3rem 2rem;
+            max-width: 600px;
             background-color: white;
             border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05),
-                        0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
-            position: absolute;
-            top: 24px;
-            left: 24px;
-            text-align: left;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             color: var(--primary);
             font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .logo:hover {
-            color: var(--primary-light);
-        }
-
-        .logo span {
+            margin-bottom: 2rem;
             display: block;
-            font-size: 0.875rem;
-            color: var(--gray-700);
-            font-weight: 400;
-        }
-
-        .main-content {
-            padding-top: 2.5rem;
         }
 
         h1 {
-            font-size: 3rem;
-            color: var(--gray-800);
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.025em;
+            line-height: 1.2;
         }
 
         .tagline {
-            font-size: 1.5rem;
-            color: var(--gray-700);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .feature {
-            padding: 1.75rem;
-            background-color: var(--gray-50);
-            border-radius: 12px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .feature h3 {
-            color: var(--primary);
-            margin-bottom: 0.75rem;
             font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .feature p {
             color: var(--gray-700);
+            margin-bottom: 2.5rem;
             line-height: 1.5;
         }
 
         .email-form {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             justify-content: center;
             margin-bottom: 1rem;
             flex-wrap: wrap;
@@ -123,7 +68,7 @@
         input[type="email"] {
             padding: 0.875rem 1.25rem;
             font-size: 1rem;
-            border: 2px solid var(--gray-200);
+            border: 2px solid #e5e7eb;
             border-radius: 8px;
             width: 300px;
             transition: border-color 0.2s ease;
@@ -160,7 +105,7 @@
 
         @media (max-width: 640px) {
             .container {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
 
             h1 {
@@ -168,155 +113,23 @@
             }
 
             .tagline {
-                font-size: 1.25rem;
-            }
-
-            .logo {
-                position: relative;
-                top: 0;
-                left: 0;
-                margin-bottom: 2rem;
-            }
-        }
-
-        /* Add new footer styles */
-        footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gray-200);
-            text-align: left;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--gray-800);
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: var(--gray-700);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary);
-        }
-
-        .copyright {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--gray-200);
-            color: var(--gray-700);
-            font-size: 0.875rem;
-        }
-
-        @media (max-width: 640px) {
-            footer {
-                text-align: center;
+                font-size: 1.125rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="#" class="logo">
-            Decision Agent
-            <span>Business Resilience</span>
-        </a>
+        <div class="logo">Decision Agent</div>
         
-        <div class="main-content">
-            <h1>Stay ahead of the curve</h1>
-            <p class="tagline">Revolutionizing decision-making through advanced wargaming and agentic AI-powered scenario exercises</p>
-            
-            <div class="features">
-                <div class="feature">
-                    <h3>Wargaming</h3>
-                    <p>Strategic simulation for better business outcomes</p>
-                </div>
-                <div class="feature">
-                    <h3>Decision Making</h3>
-                    <p>Enhanced crisis response capabilities</p>
-                </div>
-                <div class="feature">
-                    <h3>Exercising</h3>
-                    <p>Real-world scenario training</p>
-                </div>
-                <div class="feature">
-                    <h3>Agentic AI</h3>
-                    <p>Advanced AI-driven scenario generation and analysis</p>
-                </div>
-            </div>
+        <h1>Coming Soon</h1>
+        <p class="tagline">AI wargaming to test and improve your business resilience. Sign up now for first access and early updates.</p>
 
-            <form class="email-form" id="emailForm">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Get Early Access</button>
-            </form>
-            <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
-        </div>
-
-        <footer>
-            <div class="footer-section">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Use Cases</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Solutions</h4>
-                <ul>
-                    <li><a href="#">Wargaming</a></li>
-                    <li><a href="#">Crisis Management</a></li>
-                    <li><a href="#">Decision Support</a></li>
-                    <li><a href="#">AI Integration</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                © 2024 Decision Agent. All rights reserved.
-            </div>
-        </footer>
+        <form class="email-form" id="emailForm">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Get Early Access</button>
+        </form>
+        <p class="success-message" id="successMessage">Thanks! You'll be the first to know when we launch.</p>
     </div>
 
     <script>
