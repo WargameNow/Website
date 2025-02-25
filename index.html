@@ -194,6 +194,21 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .contact-info {
+            text-align: center;
+            color: var(--white);
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -243,6 +258,10 @@
                 <button type="submit">Send</button>
             </form>
             <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
+        </div>
+
+        <div class="contact-info">
+            <p>Get in touch: <a href="mailto:info@decision-agent.co.uk">info@decision-agent.co.uk</a></p>
         </div>
     </div>
 
