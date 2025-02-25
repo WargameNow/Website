@@ -9,6 +9,7 @@
             --primary: #4B0082;
             --primary-light: #6A0DAD;
             --white: #ffffff;
+            --logo-red: #FF3B30;
         }
 
         body {
@@ -35,23 +36,34 @@
             position: relative;
             z-index: 1;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             gap: 4rem;
-            align-items: flex-start;
         }
 
         .content {
             flex: 1;
             color: var(--white);
+            text-align: center;
+            max-width: 800px;
         }
 
         .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: 400;
             margin-bottom: 3rem;
             color: var(--white);
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-da {
+            color: var(--logo-red);
+            margin-right: 0.75rem;
+            font-weight: 500;
         }
 
         h1 {
@@ -72,8 +84,10 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 12px;
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
         }
 
         .form-title {
@@ -125,6 +139,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             color: var(--white);
+            text-align: left;
         }
 
         .pillar {
@@ -155,15 +170,11 @@
 
         @media (max-width: 900px) {
             .page-container {
-                flex-direction: column;
-                text-align: center;
                 gap: 4rem;
             }
 
             .form-container {
                 width: 100%;
-                max-width: 400px;
-                margin: 0 auto;
             }
 
             h1 {
@@ -172,7 +183,6 @@
 
             .pillars-section {
                 grid-template-columns: 1fr;
-                text-align: left;
             }
         }
     </style>
@@ -182,7 +192,10 @@
     <canvas id="neural-background"></canvas>
     <div class="page-container">
         <div class="content">
-            <div class="logo">Decision Agent</div>
+            <div class="logo">
+                <span class="logo-da">DA</span>
+                <span>DECISION AGENT</span>
+            </div>
             <h1>Building the Foundation for AI-Driven Workplaces</h1>
             <p class="tagline">We harness data to decode the world of work—laying the foundation for AI-driven workplaces of the future. By understanding decision-making at its core, we empower AI agents to work seamlessly alongside humans, driving efficiency, precision, and innovation.</p>
 
