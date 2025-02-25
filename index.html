@@ -104,6 +104,40 @@
             text-align: center;
         }
 
+        .pillars-section {
+            margin-top: 4rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            color: var(--white);
+        }
+
+        .pillar {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pillar i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .pillar p {
+            font-size: 0.95rem;
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
         @media (max-width: 900px) {
             .page-container {
                 flex-direction: column;
@@ -120,15 +154,53 @@
             h1 {
                 font-size: 2.5rem;
             }
+
+            .pillars-section {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="page-container">
         <div class="content">
             <div class="logo">Decision Agent</div>
-            <h1>AI Wargaming for Business Resilience</h1>
-            <p class="tagline">Test and improve your business resilience with advanced AI-powered scenario planning.</p>
+            <h1>Building the Foundation for AI-Driven Workplaces</h1>
+            <p class="tagline">We harness data to decode the world of work—laying the foundation for AI-driven workplaces of the future. By understanding decision-making at its core, we empower AI agents to work seamlessly alongside humans, driving efficiency, precision, and innovation.</p>
+
+            <div class="pillars-section">
+                <div class="pillar">
+                    <i class="fas fa-robot"></i>
+                    <h3>Lead the AI Agent Revolution</h3>
+                    <p>Stay ahead of the curve as AI transforms work.</p>
+                </div>
+                
+                <div class="pillar">
+                    <i class="fas fa-brain"></i>
+                    <h3>Your Business, Your Intelligence</h3>
+                    <p>Capture the decisions and actions that define your success.</p>
+                </div>
+                
+                <div class="pillar">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Collect, analyze, and refine workplace data to fuel smarter automation.</p>
+                </div>
+                
+                <div class="pillar">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Agentic Workplaces</h3>
+                    <p>Reimagine workflows with AI agents at the helm.</p>
+                </div>
+                
+                <div class="pillar">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Speed, Efficiency, Excellence</h3>
+                    <p>Work smarter, faster, and with higher quality.</p>
+                </div>
+            </div>
         </div>
 
         <div class="form-container">
