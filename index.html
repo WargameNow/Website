@@ -133,8 +133,8 @@
 
         <div class="form-container">
             <h2 class="form-title">Get Early Access</h2>
-            <form id="emailForm">
-                <input type="email" placeholder="Enter your email address" required>
+            <form id="emailForm" action="https://formsubmit.co/hughrichardson@hotmail.co.uk" method="POST">
+                <input type="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit">Request Access</button>
             </form>
             <p class="success-message" id="successMessage">Thanks! We'll keep you updated on our launch.</p>
@@ -144,8 +144,13 @@
     <script>
         document.getElementById('emailForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            const form = this;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            });
             document.getElementById('successMessage').style.display = 'block';
-            this.reset();
+            form.reset();
         });
     </script>
 </body>
