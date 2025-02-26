@@ -15,10 +15,11 @@
     <title>Decision Agent - Coming Soon</title>
     <style>
         :root {
-            --primary: #4B0082;
-            --primary-light: #6A0DAD;
+            --primary: #121212;
+            --primary-light: #2a2a2a;
             --white: #ffffff;
             --logo-red: #FF3B30;
+            --accent: #4B0082;
         }
 
         body {
@@ -47,9 +48,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
             gap: 4rem;
+            min-height: 100vh;
         }
 
         .content {
@@ -87,20 +90,27 @@
             margin-bottom: 2rem;
             line-height: 1.6;
             opacity: 0.9;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .form-container {
-            background: var(--white);
+            background: rgba(30, 30, 30, 0.8);
             padding: 2rem;
             border-radius: 12px;
             width: 100%;
             max-width: 400px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .form-title {
-            color: #333;
+            color: var(--white);
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
@@ -110,16 +120,22 @@
             width: 100%;
             padding: 0.875rem;
             margin-bottom: 1rem;
-            border: 1px solid #e1e1e1;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 6px;
             font-size: 1rem;
             box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: var(--white);
+        }
+
+        input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.6);
         }
 
         button {
             width: 100%;
             padding: 0.875rem;
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
             border: none;
             border-radius: 6px;
@@ -134,7 +150,7 @@
         }
 
         .success-message {
-            color: #059669;
+            color: #4ade80;
             display: none;
             margin-top: 1rem;
             text-align: center;
@@ -152,11 +168,11 @@
         }
 
         .pillar {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             padding: 1.5rem;
             border-radius: 12px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Remove the icon styles */
@@ -219,10 +235,12 @@
                 <span class="logo-da">DA</span>
                 <span>DECISION AGENT</span>
             </div>
-            <h1>Building the Foundation for AI-Driven Workplaces</h1>
-            <p class="tagline">AI agents are coming—it's time to embrace them responsibly.
-No one knows your business better than you.
-Through wargaming and exercises, we help you fine-tune your operations and identify what can be automated with the highest level of safety and accuracy.</p>
+            <h1>Building the Foundations for AI-Agent Workplaces</h1>
+            <p class="tagline">AI Agents are coming to your workplace, but no one knows your business better than you.<br><br> It's time to embrace them, responsibly, with the highest level of safety and accuracy.
+<br><br>
+Through wargaming and exercises, we help you take a data led approach to your operations and identify how AI Agents can automate your tasks so you can concentrate on what is important.   
+
+</p>
 
             <div class="pillars-section">
                 <div class="pillar">
@@ -322,7 +340,7 @@ Through wargaming and exercises, we help you fine-tune your operations and ident
 
         // Animation loop
         function animate() {
-            ctx.fillStyle = 'rgba(75, 0, 130, 0.1)';
+            ctx.fillStyle = 'rgba(18, 18, 18, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             nodes.forEach(node => {
